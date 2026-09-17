@@ -121,5 +121,9 @@ $ curl http://ec2-100-53-185-27.compute-1.amazonaws.com:8080/api/health
 Paste the delete output, or describe the console evidence that the resources are gone.
 
 ```
+$ aws cloudformation delete-stack --stack-name lab04-service
+$ aws cloudformation wait stack-delete-complete --stack-name lab04-service
+$ aws cloudformation describe-stacks --stack-name lab04-service
 
+aws: [ERROR]: An error occurred (ValidationError) when calling the DescribeStacks operation: Stack with id lab04-service does not exist
 ```
